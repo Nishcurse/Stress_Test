@@ -38,6 +38,24 @@ void generate_string(int l, int r, int size) {
   cout << "\n";
 }
 
+// Generates a random tree with n nodes
+void generate_tree(int n) {
+    vector<pair<int, int>> edges;
+    
+    // Connect each node to a previous node to ensure a connected tree
+    for (int i = 2; i <= n; ++i) {
+        int u = i;
+      //indexing from 1 to n of nodes
+        int v = generate_number(1, i);  // connect to any previous node
+        edges.emplace_back(u, v);
+    }
+    
+    // Print the edges
+    for (const auto& edge : edges) {
+        cout << edge.first << " " << edge.second << "\n";
+    }
+}
+
 int main (int argc, char **argv) {
   // argv is an array of strings
   // atoi is a C function for converting a string into an int
