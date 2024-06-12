@@ -1,16 +1,24 @@
 @echo off
 
 for /l %%i in (1, 1, 100) do (
-    echo %%i
+    echo Running test case %%i
     g++ -std=c++20 -o GenerateCases GenerateCases.cpp
     
-    GenerateCases.exe %%i 200 > genrated.txt
+    GenerateCases.exe %%i 2000 8000000000 > generated.txt
 
-    g++.exe -std=c++20 -DONLINE_JUDGE "optimalSoln.cpp" -o "optimalSoln.exe" && optimalSoln.exe < genrated.txt > output.txt
+    g++.exe -std=c++20 -DONLINE_JUDGE "optimalSoln.cpp" -o "optimalSoln.exe" && optimalSoln.exe < generated.txt > output.txt
 
-    g++.exe -std=c++20 -DONLINE_JUDGE "testSoln.cpp" -o "testSoln.exe" && testSoln.exe < genrated.txt > test.txt
+    g++.exe -std=c++20 -DONLINE_JUDGE "testSoln.cpp" -o "testSoln.exe" && testSoln.exe < generated.txt > test.txt
 
-    fc output.txt test.txt || goto :out
+    fc output.txt test.txt > nul
+    if errorlevel 1 (
+        echo Test case %%i failed
+        echo Content of generated.txt:
+        type generated.txt
+        goto :end
+    )
 )
 
-:out
+:end
+echo Script finished. Press any key to exit.
+pause > nul

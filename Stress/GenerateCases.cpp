@@ -8,15 +8,12 @@ int main (int argc, char **argv) {
 
   srand(atoi(argv[1])); // srand sets the random seed
   int lim = atoi(argv[2]);
-  int n = 1+(rand() % lim);
-  int h = 120000+(rand() % lim);
-  cout << h << " " <<  n << endl;
-  for (int i = 0; i < n; i++) {
-    cout << 1 + (rand() % lim) << " ";
-  }
-  cout<<endl;
-  for (int i = 0; i < n; i++) {
-    cout << 1 + (rand() % lim) << " ";
-  }
-  cout << endl;
+  int lim2 = atoi(argv[3]);
+  int  x = 1 + (rand() % lim);
+  int  y = 1 + (rand() % lim);
+  int  z = 1 + (rand() % lim);
+  long long int k = 1 + (rand() % lim2);
+  cout<<"1\n";
+  cout<<x<<" "<<y<<" "<<z<<" ";
+  cout<<k<<"\n";
 }
