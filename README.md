@@ -35,4 +35,4 @@ Thank you,
 ---
 
 <sub>**Version** - 1.0.0.0</sub>  
-<sub>**Author** - [nish](https://github.com/Nishcurse) , Adwiteek Samadder,Akshat Madhavan</sub>
+<sub>**Author** - [nish](https://github.com/Nishcurse) , [Adwiteek Samadder](https://github.com/Advtik) , [Akshat Madhavan](https://github.com/GokuUu007)</sub>
