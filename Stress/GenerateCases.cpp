@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
-using namespace std;
 #include "generativewoho.h"
+
+using namespace std;
 
 // generate_number(l,r) ->l - r | generates numbers in range from [l , r) inclusive
 // generate_array(l,r,n) ->[l - r) -> range of values for the array where n is the size of array
