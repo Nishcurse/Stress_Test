@@ -13,37 +13,42 @@
 
 ## More Details on How `GenerateCases.cpp` Works and How You Can Manipulate It
 
-Version 2.0.0.0
+## Version 2.0.0.0
 New Functions for Generating Test Cases
 We are excited to introduce new functions in our Stress Testing Template to help you generate diverse test cases more easily. Here’s a quick overview of the new features:
 
-generate_number(l, r)
+### generate_number(l, r)
 
 Description: Generates a random number in the range [l, r] (inclusive).
 
 
 ```int num = generate_number(1, 10); // Generates a number between 1 and 10.```
-generate_array(l, r, n)
+
+### generate_array(l, r, n)
 
 Description: Generates an array of size n with random values in the range [l, r] (inclusive).
 Usage Example:
 ```
 vector<int> arr = generate_array(1, 10, 5); // Generates an array of 5 elements with values between 1 and 10.
-generate_permutation(l, r)
+
+
 ```
+### generate_permutation(l, r)
 
 Description: Generates a random permutation of numbers from l to r (inclusive).
 Usage Example:
 ```
 vector<int> perm = generate_permutation(1, 5); // Generates a permutation of numbers from 1 to 5.
-generate_string(l, r, n)
+
 ```
+### generate_string(l, r, n)
+
 Description: Generates a random string of length n with characters from the set [chr(l), chr(r)] where 0 <= l <= r < 26 (e.g., (0, 2) generates a string with characters 'a', 'b', 'c').
 Usage Example:
 ```
 string str = generate_string(0, 2, 5); // Generates a string of length 5 with characters 'a', 'b', 'c'.
 ```
-generate_tree(n)
+### generate_tree(n)
 
 Description: Generates a random tree with n nodes.
 Usage Example:
