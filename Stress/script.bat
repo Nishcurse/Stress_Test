@@ -4,7 +4,7 @@ for /l %%i in (1, 1, 100) do (
     echo Running test case %%i
     g++ -std=c++20 -o GenerateCases GenerateCases.cpp
     
-    GenerateCases.exe %%i 2000 8000000000 > generated.txt
+    GenerateCases.exe %%i 200000 10000 > generated.txt
 
     g++.exe -std=c++20 -DONLINE_JUDGE "optimalSoln.cpp" -o "optimalSoln.exe" && optimalSoln.exe < generated.txt > output.txt
 
