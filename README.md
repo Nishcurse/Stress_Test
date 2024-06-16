@@ -1,7 +1,8 @@
 # Stress_Test
 ------------------------------------------------------------------------
 **Idea behind this is generally taken from the [is-this-fft blog](https://codeforces.com/blog/entry/102287)**
-#Incase you have a lower Version of gcc
+
+**Incase you have a lower Version of gcc**
 make sure you have do this changes in script.bat change it into this 
 ```@echo off
 
