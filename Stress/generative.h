@@ -115,3 +115,14 @@ void generate_tree(int n) {
 
     print_tree_edges(prufer, length);
 }
+
+// n - vertices, m - edges
+void generate_graph(int n, int m) {
+    for (int i = 0; i < m; ++i) {
+        int u = generate_number(1, n);
+        int x = u > 1 ? generate_number(1, u - 1);
+        int y = u + 1 < n ? generate_number(u + 1, n);
+        int z = rand() % n;
+        cout << u << " " << (z & 1 ? x : y) << "\n";
+    }
+}
