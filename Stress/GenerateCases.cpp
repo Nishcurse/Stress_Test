@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include "generativewoho.h"
+#include "generative.h"
 
 using namespace std;
 // You can use These Generated Functions to generate whatever Types of Case You Want
@@ -19,7 +19,7 @@ int main (int argc, char **argv) {
 
   // pass the range of number of testcases you want
 
-  int t = generate_number(1,10);
+  int t = generate_number(1,30);
   cout << t << "\n";
   while (t--) {
     /*

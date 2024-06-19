@@ -3,14 +3,13 @@
 for /l %%i in (1, 1, 100) do (
     echo Running test case %%i
     g++ -std=c++20 -o GenerateCases GenerateCases.cpp
-    
-    GenerateCases.exe %%i 200000 10000 > generated.txt
+    GenerateCases.exe  > generated.txt
 
-    g++.exe -std=c++20 -DONLINE_JUDGE "optimalSoln.cpp" -o "optimalSoln.exe" && optimalSoln.exe < generated.txt > output.txt
+    g++.exe -std=c++20 -DONLINE_JUDGE "brute.cpp" -o "brute.exe" && brute.exe < generated.txt > bruteOutput.txt
 
-    g++.exe -std=c++20 -DONLINE_JUDGE "testSoln.cpp" -o "testSoln.exe" && testSoln.exe < generated.txt > test.txt
+    g++.exe -std=c++20 -DONLINE_JUDGE "optimal.cpp" -o "optimal.exe" && optimal.exe < generated.txt > optimalOutput.txt
 
-    fc output.txt test.txt > nul
+    fc bruteOutput.txt optimalOutput.txt > nul
     if errorlevel 1 (
         echo Test case %%i failed
         echo Content of generated.txt:
