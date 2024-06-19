@@ -102,6 +102,8 @@ void generate_tree(int n) {
     if (n == 1) {
         std::cout << "1\n";
         return;
+    }else{
+    std::cout << n << "\n";
     }
     int length = n - 2;
     std::vector<int> prufer(length);
