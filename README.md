@@ -1,5 +1,7 @@
 Hello Everyone,
 
+Note : Some Things have changed in newer version of c++(gcc ver 14) so generative might not function correctly i will update those very soon! sorry for all the trouble ~nish 
+
 The idea for this project (we can call it that, I guess) was inspired by [this blog](https://codeforces.com/blog/entry/102287). However, we found ourselves too lazy to write the code needed to generate test cases and then check them.
 
 Project Link &mdash; [Click Here to Open](https://github.com/Nishcurse/Stress_Test/tree/main) (If you find this helpful, please consider starring this repository )
